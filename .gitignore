@@ -1,0 +1,11 @@
+*.log
+*.tmp
+/tmp/
+Thumbs.db
+desktop.ini
+
+# Ancienne implementation PowerShell, conservee hors suivi git.
+/archive/
+
+# Artefacts de build Rust.
+/rust/target/
