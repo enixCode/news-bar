@@ -1,0 +1,21 @@
+# Configuration de distribution (outil "dist" / cargo-dist).
+# Le projet Cargo est dans le sous-dossier rust/ ; ce fichier reste a la racine
+# du depot et pointe vers lui.
+
+[workspace]
+members = ["cargo:rust/"]
+
+# Config for 'dist'
+[dist]
+# The preferred dist version to use in CI (Cargo.toml SemVer syntax)
+cargo-dist-version = "0.32.0"
+# CI backends to support
+ci = "github"
+# Target platforms to build apps for (Rust target-triple syntax)
+targets = ["x86_64-pc-windows-msvc"]
+# The installers to generate for each app
+installers = ["powershell"]
+# Path that installers should place binaries in
+install-path = "CARGO_HOME"
+# Whether to install an updater program
+install-updater = true
